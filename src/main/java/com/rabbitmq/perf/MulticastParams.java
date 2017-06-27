@@ -273,9 +273,9 @@ public class MulticastParams {
                                      false,
                                      autoDelete,
                                      null).getQueue();
+            	channel.queueBind(qName, exchangeName, id);
             }
             generatedQueueNames.add(qName);
-            channel.queueBind(qName, exchangeName, id);
         }
         channel.abort();
 
